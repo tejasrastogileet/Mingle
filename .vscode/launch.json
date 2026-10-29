@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Meetnow backend",
+            "request": "launch",
+            "mainClass": "com.meetnow.MeetnowApplication",
+            "projectName": "meetnow",
+            "cwd": "${workspaceFolder}\\Backend\\meetnow"
+        }
+    ]
+}

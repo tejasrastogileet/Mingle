@@ -1,0 +1,141 @@
+/* ========================================
+   Mingle — Tailwind CSS Design System
+   All styling done via Tailwind utilities.
+   Only global resets, theme tokens, and
+   keyframes live here.
+   ======================================== */
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ── Tailwind v4 Custom Theme Tokens ── */
+@theme {
+  /* Design palette */
+  --color-theme-charcoal: #383838;
+  --color-theme-lime: #D7E97A;
+  --color-theme-coral: #E76A6A;
+  --color-theme-offwhite: #F2F2F0;
+  --color-theme-white: #FFFFFF;
+  --color-theme-lightgray: #D9D9D9;
+  --color-theme-beige: #C9B39A;
+  --color-theme-olive: #8C9465;
+  --color-brand-primary: #4361ee;
+  --color-brand-primary-hover: #3a56d4;
+  --color-brand-soft: rgba(67, 97, 238, 0.12);
+  --color-brand-text: #7b93f5;
+
+  --color-surface-dark: #1a1a2e;
+  --color-surface-secondary: #16213e;
+  --color-surface-tertiary: #0f3460;
+  --color-surface-card: #1e2746;
+  --color-surface-card-hover: #263152;
+  --color-surface-input: #212b45;
+
+  --color-surface-light: #f8f9fc;
+  --color-surface-light-card: #ffffff;
+  --color-surface-light-hover: #f3f4f8;
+  --color-surface-light-input: #f1f3f8;
+
+  --color-txt-primary: #e8eaf0;
+  --color-txt-secondary: #9ca3b4;
+  --color-txt-muted: #6b7185;
+
+  --color-txt-light-primary: #1a1d2e;
+  --color-txt-light-secondary: #5f6580;
+  --color-txt-light-muted: #8b90a5;
+
+  --color-border-dark: #2d3555;
+  --color-border-light: #e2e5ee;
+
+  --color-success: #2ecc71;
+  --color-success-soft: rgba(46, 204, 113, 0.12);
+  --color-danger: #e74c3c;
+  --color-danger-soft: rgba(231, 76, 60, 0.12);
+  --color-warning: #f39c12;
+
+  /* Meeting room palette */
+  --color-meet-charcoal: #383838;
+  --color-meet-lime: #DBEA8D;
+  --color-meet-lime-dark: #c5d67a;
+  --color-meet-coral: #E96666;
+  --color-meet-coral-dark: #d05555;
+  --color-meet-light: #F1F1F1;
+  --color-meet-white: #FFFFFF;
+  --color-meet-dark: #1a1a1a;
+  --color-meet-surface: #2a2a2a;
+  --color-meet-surface-hover: #3a3a3a;
+  --color-meet-border: #444444;
+  --color-meet-text-muted: #9a9a9a;
+  --color-meet-overlay: rgba(0, 0, 0, 0.55);
+
+  /* Admin purple */
+  --color-purple-soft: rgba(155, 89, 182, 0.12);
+  --color-purple: #9b59b6;
+
+  /* Fonts */
+  --font-sans: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-outfit: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+
+  /* Redesigned Semantic Colors for Tailwind classes */
+  --color-primary: #383838;
+  --color-secondary: #2d2d2d;
+  --color-tertiary: #1f1f1f;
+  --color-surface: #474747;
+  --color-surface-hover: #525252;
+  --color-input: #2a2a2a;
+  
+  --color-brand: #DBEA8D;
+  --color-brand-hover: #c5d67a;
+  --color-brand-soft: rgba(219, 234, 141, 0.12);
+  
+  --color-coral: #E96666;
+  --color-coral-dark: #d05555;
+  --color-coral-soft: rgba(233, 102, 102, 0.12);
+
+  --color-offwhite: #F1F1F1;
+  --color-border-primary: #4c4c4c;
+}
+
+
+/* Fallback rule for arbitrary class font-[Outfit] to prevent Times New Roman fallback */
+.font-\[Outfit\] {
+  font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* ── Agora video container resets ── */
+.agora_video_player {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* ── React Toastify Custom Theme Overrides ── */
+:root {
+  --toastify-font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --toastify-toast-bd-radius: 14px;
+  
+  /* Background colors for colored state */
+  --toastify-color-success: #DBEA8D;
+  --toastify-color-error: #E96666;
+  --toastify-color-warning: #C9B39A;
+  --toastify-color-info: #474747;
+}
+
+/* Ensure success toasts using lime color have dark text for readability */
+.Toastify__toast-theme--colored.Toastify__toast--success {
+  color: #383838 !important;
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--success .Toastify__close-button {
+  color: #383838 !important;
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--success .Toastify__toast-icon svg {
+  fill: #383838 !important;
+}
+
+.Toastify__toast {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
