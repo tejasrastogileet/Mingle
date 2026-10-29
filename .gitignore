@@ -1,0 +1,16 @@
+
+node_modules/
+Frontend/client/node_modules/
+Frontend/client/dist/
+Backend/mingle/target/
+*.class
+.env
+.env.local
+
+node_modules/
+Frontend/client/node_modules/
+Frontend/client/dist/
+Backend/mingle/target/
+*.class
+.env
+.env.local
